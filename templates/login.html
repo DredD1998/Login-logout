@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to my world</title>
+  </head>
+  <body>
+    <form class="box" action="/login" method="POST">
+      {% csrf_token %}
+      <img class="mb-4" src="static/00.png" alt="" width="60" height="55" />
+      <h2>Login</h2>
+      <input type="text" name="username" placeholder="Username" />
+      <input type="password" name="password" placeholder="Password" />
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" name="checkbox" value="rememberme" /> Remember
+          me
+        </label>
+      </div>
+      <input type="submit" name="submit" value="login" />
+    </form>
+    <style>
+      body {
+        background: url(static/0.png) no-repeat;
+        background-color: rgb(0, 0, 0);
+        background-size: cover;
+      }
+      .box {
+        padding: 30px;
+        position: absolute;
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        text-align: center;
+        color: white;
+      }
+      .box input[type="text"],
+      .box input[type="password"] {
+        background: none;
+        display: block;
+        text-align: center;
+        border: 2px solid #ff00e6;
+        margin: 16px auto;
+        padding: 13px 12px;
+        width: 180px;
+        outline: none;
+        color: rgb(255, 255, 255);
+        transition: 0.25s;
+        border-radius: 28px;
+      }
+      .box h2 {
+        color: rgb(255, 255, 255);
+        font-family: sans-serif;
+      }
+      .box input[type="text"]:focus,
+      .box input[type="password"]:focus {
+        width: 245px;
+        border-color: #00ddff;
+      }
+      .box input[type="submit"] {
+        display: block;
+        background: none;
+        margin: 14px auto;
+        padding: 9px 20px;
+        border: 2px solid #0dff00;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        transition: 0.2s;
+        border-radius: 28px;
+      }
+      .box input[type="submit"]:hover {
+        background: #f700ff;
+        cursor: pointer;
+      }
+    </style>
+  </body>
+</html>
